@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  startdate: 2013-09-29
+  t_24: 1
+  t_36: 1
+  t_48: 1
+  t_60: 1
+  t_72: 1
+  t_84: 1
+  t_96: 1
+  t_108: 1
+  t_120: 1
+  t_132: 1
+  t_144: 1
+  t_156: 1
+  t_168: 1
+  t_180: 1
+  t_192: 1
+
+two:
+  startdate: 2013-09-29
+  t_24: 1
+  t_36: 1
+  t_48: 1
+  t_60: 1
+  t_72: 1
+  t_84: 1
+  t_96: 1
+  t_108: 1
+  t_120: 1
+  t_132: 1
+  t_144: 1
+  t_156: 1
+  t_168: 1
+  t_180: 1
+  t_192: 1

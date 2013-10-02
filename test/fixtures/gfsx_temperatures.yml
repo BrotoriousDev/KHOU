@@ -1,0 +1,67 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  startdate: 2013-09-29
+  t_24: MyString
+  : 1
+  t_36: MyString
+  : 1
+  t_48: MyString
+  : 1
+  t_60: MyString
+  : 1
+  t_72: MyString
+  : 1
+  t_84: MyString
+  : 1
+  t_96: MyString
+  : 1
+  t_108: MyString
+  : 1
+  t_120: MyString
+  : 1
+  t_132: MyString
+  : 1
+  t_144: MyString
+  : 1
+  t_156: MyString
+  : 1
+  t_168: MyString
+  : 1
+  t_180: MyString
+  : 1
+  t_192: MyString
+  : 1
+
+two:
+  startdate: 2013-09-29
+  t_24: MyString
+  : 1
+  t_36: MyString
+  : 1
+  t_48: MyString
+  : 1
+  t_60: MyString
+  : 1
+  t_72: MyString
+  : 1
+  t_84: MyString
+  : 1
+  t_96: MyString
+  : 1
+  t_108: MyString
+  : 1
+  t_120: MyString
+  : 1
+  t_132: MyString
+  : 1
+  t_144: MyString
+  : 1
+  t_156: MyString
+  : 1
+  t_168: MyString
+  : 1
+  t_180: MyString
+  : 1
+  t_192: MyString
+  : 1

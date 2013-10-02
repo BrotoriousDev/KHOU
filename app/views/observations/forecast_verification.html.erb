@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+<div id="container" style="min-width: 310px; height: 600px; margin: 0 auto"></div>
+<script>
+            ($(function () {
+        $('#container').highcharts({
+            chart: {
+                type: 'spline'
+            },
+            legend: {
+                itemStyle: {
+                    fontSize: '16px'
+                }
+            },
+            title: {
+                text:<%= raw @titlestring.to_json %>,
+            },
+            xAxis: {
+                type: 'datetime',
+            },
+            yAxis: {
+                title: {
+                    text: <%= raw @wxvar_name.to_json %>,
+                },
+            },
+            series: [{
+                name: 'ASOS',
+                data: <%= @ob_array.to_json %>
+                },
+                {
+                name: 'GFSX',
+                data: <%=@gfsxforecast.to_json %>
+                },
+                {
+                name: 'NAM',
+                data: <%=@namforecast.to_json%>
+                },
+                {
+                name: 'GFS',
+                data: <%=@gfsforecast.to_json%>
+                }]
+        });
+    }));
+</script>
+</head>
+  <% option_array = [['Temperature', :temperature],['Dewpoint',:dewpoint],['Wind Speed',:windspeed]] %>
+  <%  firstday = NamTime.first.startdate
+lastday = NamTime.last.startdate
+startdates = (firstday..lastday).map {|n| n}
+date_options = startdates.map {|d| [d.to_s,d.to_s]}
+  %>
+
+  <%= form_tag :action => 'forecast_verification' do %>
+        <%= select_tag(:field,options_for_select(option_array,:selected=> params[:field])) %>
+        <%= select_tag(:userdate,options_for_select(date_options,:selected=> params[:userdate])) %>
+        <%= submit_tag 'Click to submit query ' %>
+  <% end %>
+</html>
