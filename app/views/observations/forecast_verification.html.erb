@@ -9,7 +9,7 @@
             ($(function () {
         $('#container').highcharts({
             chart: {
-                type: 'spline'
+
             },
             legend: {
                 itemStyle: {
@@ -29,18 +29,22 @@
             },
             series: [{
                 name: 'ASOS',
+                type: 'spline',
                 data: <%= @ob_array.to_json %>
                 },
                 {
                 name: 'GFSX',
+                type: 'spline',
                 data: <%=@gfsxforecast.to_json %>
                 },
                 {
                 name: 'NAM',
+                type: 'spline',
                 data: <%=@namforecast.to_json%>
                 },
                 {
                 name: 'GFS',
+                type: 'spline',
                 data: <%=@gfsforecast.to_json%>
                 }]
         });
